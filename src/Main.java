@@ -138,7 +138,7 @@ public class Main {
             }
         }
 
-        System.out.println("----------------13.------------------");
+        System.out.println("\n----------------13.------------------");
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
@@ -225,17 +225,29 @@ public class Main {
 
         System.out.println("----------------17.------------------");
 
-//        int height = 21;
-//
-//        for (int i = 0; i < height; i++) {
-//            for (int j = height - i; j > 0; j--) {
-//                System.out.print(" ");
-//            }
-//            for (int j = 0; j < height; j++) {
-//                System.out.print("*");
-//            }
-//            System.out.println();
-//        }
+        int numRows = 21;
+        if (numRows % 2 == 0) {
+            numRows++; // Ensure the number of rows is odd for symmetry.
+        }
+
+        int spaces = numRows / 2;
+        int stars = 1;
+        for (int i = 1; i <= numRows; i++) {
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            if (i <= numRows / 2) {
+                spaces--;
+                stars += 2;
+            } else {
+                spaces++;
+                stars -= 2;
+            }
+        }
 
         System.out.println("----------------18.------------------");
 
