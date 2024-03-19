@@ -209,16 +209,17 @@ public class Main {
             tKazys += Kazys;
             tPetras += Petras;
 
-            if (tKazys >= 222 && tKazys > tPetras) {
-                winner = "Kazys";
-                break;
-            } else if (tPetras >= 222 && tPetras > tKazys) {
-                winner = "Petras";
-                break;
-            } else if (tKazys >= 222 && tPetras >= 222 && tKazys == tPetras) {
+            if (tKazys >= 222 && tPetras >= 222 && tKazys == tPetras) {
                 winner = "Lygiasios";
                 break;
+            } else if (tKazys >= 222 && tKazys > tPetras) {
+                winner = "Kazys";
+                break;
+            }else if (tPetras >= 222 && tPetras > tKazys) {
+                winner = "Petras";
+                break;
             }
+
         }
 
         System.out.println("Kazys: " + tKazys + ". Petras: " + tPetras + ". Partiją laimėjo: " + winner);
